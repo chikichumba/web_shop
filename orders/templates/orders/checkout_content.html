@@ -131,31 +131,25 @@
                         </div>
                     
                         <!-- Payment Buttons -->
-                        <div class="grid grid-cols-2 gap-4">
-                            <button type="submit" 
-                                    form="order-form"
-                                    name="create_order" 
-                                    value="create_order" 
-                                    class="w-full bg-black text-white py-4 px-6 font-bold hover:bg-gray-800 transition-colors payment-button"
-                                    onclick="document.getElementById('payment_provider').value='stripe'">
-                                Pay with Stripe
-                            </button>
-                            <button type="submit" 
-                                    form="order-form"
-                                    name="create_order" 
-                                    value="create_order" 
-                                    class="w-full bg-black text-white py-4 px-6 font-bold hover:bg-gray-800 transition-colors payment-button"
-                                    onclick="document.getElementById('payment_provider').value='heleket'">
-                                Pay with Heleket
-                            </button>
-                            <input type="hidden" name="payment_provider" id="payment_provider">
-                        </div>
-                    </form>
+                        <div class="flex flex-col items-center space-y-4">
+                            <div class="w-full max-w-md">
+                                <button type="submit" 
+                                        form="order-form"
+                                        name="create_order" 
+                                        value="create_order" 
+                                        class="w-full bg-black text-white py-4 px-6 font-bold hover:bg-gray-800 transition-colors payment-button"
+                                        onclick="document.getElementById('payment_provider').value='stripe'">
+                                    Pay with Stripe
+                                </button>
+                                <input type="hidden" name="payment_provider" id="payment_provider">
+                            </div>
 
-                <!-- Refund Policy -->
-                <div class="text-center">
-                    <a href="#" class="text-sm text-gray-600 underline hover:text-gray-800">Refund Policy</a>
-                </div>
+                            <!-- Refund Policy -->
+                            <div class="text-center">
+                                <a href="#" class="text-sm text-gray-600 underline hover:text-gray-800">Refund Policy</a>
+                            </div>
+                        </div>
+                    
             </div>
         </div>
         <!-- Right Column - Order Summary -->
